@@ -76,12 +76,23 @@ window.onload=function myFunction(){
         }
             
           
-        console.log(isGameOver);
-      
-      
+        console.log(isGameOver);  
    }
     
-       
+    //restart the game.
+    
+    newgame.addEventListener('click', function(){
+        status.classList.remove('you-won');
+        status.textContent = 'Move your mouse over a square and click to play an X or an O.';
+        gamestate = new Array();
+      //removing the squares from the board.
+      for (let i = 0; i <= 8; i++){
+        shapes[i].textContent = '';
+        shapes[i].classList.remove('square');
+        shapes[i].classList.add('square');
+    };
+    console.log('New Game has begun.')
+    })
         
 
         
